@@ -1,0 +1,107 @@
+name: "🐞 Rapport de bug"
+description: "Signaler un dysfonctionnement du serveur France Travail MCP"
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler ce bug ! 🙏
+
+        Avant de continuer, merci de vérifier que :
+        - vous utilisez bien la dernière version publiée sur npm (**0.1.1**) ;
+        - vous avez cherché dans les issues existantes (ouvertes et fermées) pour éviter les doublons.
+
+        Plus votre rapport est précis, plus il sera facile et rapide de corriger le problème.
+  - type: input
+    id: version
+    attributes:
+      label: "Version utilisée"
+      description: "Version du serveur France Travail MCP que vous utilisez."
+      placeholder: "0.1.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: client-mcp
+    attributes:
+      label: "Client MCP"
+      description: "Quel client MCP utilisez-vous pour vous connecter au serveur ?"
+      options:
+        - "Claude Desktop"
+        - "Claude Code"
+        - "Cursor"
+        - "VS Code (Cline/Continue)"
+        - "Autre"
+    validations:
+      required: true
+  - type: dropdown
+    id: methode-installation
+    attributes:
+      label: "Méthode d'installation"
+      description: "Comment avez-vous installé le serveur ?"
+      options:
+        - "npx"
+        - "Bundle .mcpb (double-clic)"
+        - "Depuis les sources"
+    validations:
+      required: true
+  - type: dropdown
+    id: outil-concerne
+    attributes:
+      label: "Outil concerné"
+      description: "Quel outil MCP est concerné par le bug ?"
+      options:
+        - "ft_search_offres"
+        - "ft_get_offre"
+        - "ft_list_referentiel"
+        - "ft_search_metiers"
+        - "ft_get_metier"
+        - "ft_get_fiche_metier"
+        - "ft_predict_rome"
+        - "ft_search_entreprises"
+        - "Plusieurs / Je ne sais pas"
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description du bug"
+      description: "Décrivez clairement et de manière concise le problème rencontré."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Étapes pour reproduire"
+      description: "Listez les étapes permettant de reproduire le comportement."
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: comportement-attendu
+    attributes:
+      label: "Comportement attendu"
+      description: "Décrivez ce qui aurait dû se produire."
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / message d'erreur"
+      description: "Collez ici les logs ou messages d'erreur pertinents (ils seront formatés automatiquement)."
+      render: shell
+  - type: input
+    id: systeme-exploitation
+    attributes:
+      label: "Système d'exploitation"
+      description: "Système d'exploitation et version utilisés."
+      placeholder: "Windows 11 / macOS 14 / Ubuntu 22.04"
+  - type: checkboxes
+    id: verifications
+    attributes:
+      label: "Vérifications"
+      description: "Merci de confirmer les points suivants avant de soumettre."
+      options:
+        - label: "J'utilise la dernière version"
+          required: true
+        - label: "J'ai cherché dans les issues existantes (ouvertes et fermées)"
+          required: true

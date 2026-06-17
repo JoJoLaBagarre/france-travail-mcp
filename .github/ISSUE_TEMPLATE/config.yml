@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions et entraide
+    url: https://github.com/JoJoLaBagarre/france-travail-mcp/discussions
+    about: Pour poser une question, demander de l'aide ou échanger avec la communauté autour du serveur MCP France Travail.
+  - name: 📚 Documentation des API France Travail
+    url: https://francetravail.io
+    about: Consultez la documentation officielle des API France Travail (offres, ROME, métiers, référentiels) avant d'ouvrir une issue.
+  - name: 🔒 Signaler une faille de sécurité
+    url: https://github.com/JoJoLaBagarre/france-travail-mcp/security/advisories/new
+    about: Signalez une vulnérabilité de manière confidentielle via les avis de sécurité GitHub plutôt que dans une issue publique.

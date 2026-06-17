@@ -1,0 +1,53 @@
+name: '💡 Demande de fonctionnalité'
+description: 'Proposer une nouvelle fonctionnalité ou amélioration pour le serveur MCP France Travail.'
+title: '[Feature]: '
+labels: ['enhancement', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de proposer une amélioration au serveur MCP France Travail.
+
+        Ce projet expose les API officielles France Travail (Offres d'emploi, ROME, ROMEO, La Bonne Boîte, etc.) sous forme d'outils MCP. Avant de remplir ce formulaire, vérifiez qu'une demande similaire n'existe pas déjà dans les issues ouvertes ou fermées.
+  - type: textarea
+    attributes:
+      label: Quel problème ou besoin cela résout-il ?
+      description: Décrivez le contexte et le besoin concret. Quel cas d'usage n'est aujourd'hui pas couvert par le serveur MCP ?
+      placeholder: 'Exemple : impossible de filtrer les offres par type de contrat depuis l''outil de recherche d''offres.'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Solution proposée
+      description: Décrivez la fonctionnalité ou l'évolution souhaitée. Précisez, si possible, l'outil MCP concerné ou le comportement attendu.
+      placeholder: 'Exemple : ajouter un paramètre « typeContrat » à l''outil ft_search_offres.'
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: Domaine concerné
+      description: Quelle API ou quel domaine France Travail est principalement concerné par cette demande ?
+      options:
+        - Offres d'emploi
+        - ROME (métiers/fiches)
+        - ROMEO (prédiction)
+        - La Bonne Boîte
+        - Nouvelle API France Travail
+        - Autre
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Alternatives envisagées
+      description: Avez-vous envisagé d'autres approches ou contournements ? Expliquez pourquoi ils ne conviennent pas.
+      placeholder: 'Exemple : filtrer côté client après récupération de toutes les offres, mais cela consomme trop d''appels API.'
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: Vérifications
+      options:
+        - label: Cette idée reste dans le périmètre du projet (exposer les API officielles France Travail)
+          required: true
+        - label: J'ai cherché dans les issues et PR existantes
+          required: true
