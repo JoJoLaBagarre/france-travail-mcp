@@ -1,0 +1,60 @@
+{
+  "name": "france-travail-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.jojolabagarre/france-travail-mcp",
+  "description": "Serveur MCP (Model Context Protocol) pour les API officielles de France Travail : offres d'emploi, ROME 4.0, ROMEO et La Bonne Boîte.",
+  "type": "module",
+  "license": "MIT",
+  "author": "jojolabagarre (https://github.com/jojolabagarre)",
+  "homepage": "https://github.com/jojolabagarre/france-travail-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojolabagarre/france-travail-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jojolabagarre/france-travail-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "france-travail",
+    "pole-emploi",
+    "emploi",
+    "offres-emploi",
+    "rome",
+    "romeo",
+    "claude"
+  ],
+  "bin": {
+    "france-travail-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "node --watch dist/index.js",
+    "smoke": "node scripts/smoke.mjs",
+    "test": "tsc --noEmit",
+    "bundle": "npm run build && npx -y @anthropic-ai/mcpb pack",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "axios": "^1.18.0",
+    "dotenv": "^17.4.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,18 @@
+# Fichiers exclus du bundle .mcpb (on ne garde que ce qui sert à l'exécution :
+# dist/, node_modules/, manifest.json, README.md, LICENSE).
+.git/
+.github/
+src/
+scripts/
+_tmp/
+docs-perso/
+.env
+.env.*
+.gitignore
+.mcpbignore
+tsconfig.json
+server.json
+INSTALL.md
+CONTRIBUTING.md
+EXPLICATION-PERSO.md
+*.mcpb

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Évaluations du serveur france-travail-mcp.
+
+  Ces questions ciblent les RÉFÉRENTIELS de l'API Offres d'emploi v2 (outil
+  ft_list_referentiel) : leurs valeurs sont stables dans le temps, donc les
+  réponses sont vérifiables par comparaison de chaîne — contrairement aux
+  offres d'emploi, qui changent en permanence.
+
+  Prérequis : application abonnée à « Offres d'emploi v2 »
+  (scope api_offresdemploiv2 o2dsoffre).
+-->
+<evaluation>
+  <qa_pair>
+    <question>En utilisant le serveur MCP France Travail, quel est le libellé associé au code de type de contrat « MIS » dans le référentiel des types de contrats ?</question>
+    <answer>Mission intérimaire</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Combien de types de contrats distincts le référentiel des types de contrats (typesContrats) de l'API Offres d'emploi contient-il ?</question>
+    <answer>12</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Quel est le libellé du code de type de contrat « CDI » dans le référentiel des types de contrats ?</question>
+    <answer>Contrat à durée indéterminée</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Dans le référentiel des natures de contrats, quel libellé correspond au code « E2 » ?</question>
+    <answer>Contrat apprentissage</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Dans le référentiel des natures de contrats, quel libellé correspond au code « E1 » ?</question>
+    <answer>Contrat travail</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Combien de natures de contrats distinctes le référentiel naturesContrats contient-il ?</question>
+    <answer>19</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Dans le référentiel des régions de l'API Offres d'emploi, quel libellé correspond au code « 04 » ?</question>
+    <answer>La Réunion</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Combien de régions figurent dans le référentiel des régions de l'API Offres d'emploi ?</question>
+    <answer>18</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Combien de niveaux de formation le référentiel niveauxFormations propose-t-il ?</question>
+    <answer>11</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Quel est le libellé du code de niveau de formation « AFS » dans le référentiel des niveaux de formation ?</question>
+    <answer>Aucune formation scolaire</answer>
+  </qa_pair>
+</evaluation>

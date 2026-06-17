@@ -1,0 +1,51 @@
+{
+  "manifest_version": "0.3",
+  "name": "france-travail-mcp",
+  "display_name": "France Travail MCP",
+  "version": "0.1.0",
+  "description": "Branchez votre assistant IA sur les API officielles de France Travail : offres d'emploi en temps réel, métiers ROME 4.0 et prédiction de code ROME.",
+  "long_description": "Serveur MCP pour les API officielles de France Travail. Permet à un assistant IA de chercher des offres d'emploi en temps réel, de traduire un métier en code ROME (recherche ou prédiction ROMEO 2), de consulter les fiches métiers ROME 4.0 (compétences et savoirs), et de cibler les entreprises qui recrutent (La Bonne Boîte, expérimental). Authentification OAuth2 via vos identifiants francetravail.io.",
+  "author": {
+    "name": "jojolabagarre",
+    "url": "https://github.com/jojolabagarre"
+  },
+  "homepage": "https://github.com/jojolabagarre/france-travail-mcp",
+  "documentation": "https://github.com/jojolabagarre/france-travail-mcp#readme",
+  "license": "MIT",
+  "keywords": ["france-travail", "emploi", "offres-emploi", "rome", "romeo", "pole-emploi"],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/index.js"],
+      "env": {
+        "FT_CLIENT_ID": "${user_config.ft_client_id}",
+        "FT_CLIENT_SECRET": "${user_config.ft_client_secret}",
+        "FT_ENABLE_LABONNEBOITE": "${user_config.ft_enable_labonneboite}"
+      }
+    }
+  },
+  "user_config": {
+    "ft_client_id": {
+      "type": "string",
+      "title": "Client ID France Travail",
+      "description": "Identifiant de votre application créée sur francetravail.io (commence par PAR_).",
+      "required": true
+    },
+    "ft_client_secret": {
+      "type": "string",
+      "title": "Client Secret France Travail",
+      "description": "Secret de votre application. Stocké de façon sécurisée par votre système d'exploitation.",
+      "sensitive": true,
+      "required": true
+    },
+    "ft_enable_labonneboite": {
+      "type": "boolean",
+      "title": "Activer La Bonne Boîte (expérimental)",
+      "description": "Active l'outil « entreprises qui recrutent ». Nécessite une habilitation France Travail validée, sinon l'API renvoie une erreur.",
+      "default": false,
+      "required": false
+    }
+  }
+}

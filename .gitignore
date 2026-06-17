@@ -1,0 +1,22 @@
+# Dépendances
+node_modules/
+
+# Build
+dist/
+
+# Bundle MCPB généré
+*.mcpb
+
+# Secrets — NE JAMAIS committer
+.env
+.env.local
+
+# Outils / divers
+.claude/
+_tmp/
+*.log
+.DS_Store
+
+# Notes personnelles (ne pas committer)
+EXPLICATION-PERSO.md
+docs-perso/
