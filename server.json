@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.jojolabagarre/france-travail-mcp",
+  "name": "io.github.JoJoLaBagarre/france-travail-mcp",
   "description": "Serveur MCP des API officielles France Travail : offres d'emploi, ROME 4.0 et ROMEO.",
   "repository": {
     "url": "https://github.com/jojolabagarre/france-travail-mcp",
