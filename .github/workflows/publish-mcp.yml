@@ -25,7 +25,11 @@ jobs:
       - run: npm run build
 
       # 1) Publier le paquet sur npm (requiert le secret NPM_TOKEN dans le dépôt).
+      # Tolérant : si la version est déjà publiée (ex. premier publish manuel) ou si
+      # le token manque, on n'échoue pas et on continue vers le registre MCP — qui
+      # validera de toute façon que le paquet@version existe bien sur npm.
       - name: Publier sur npm
+        continue-on-error: true
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

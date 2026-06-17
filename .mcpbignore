@@ -1,6 +1,7 @@
 # Fichiers exclus du bundle .mcpb (on ne garde que ce qui sert à l'exécution :
 # dist/, node_modules/, manifest.json, README.md, LICENSE).
 .git/
+.claude/
 .github/
 src/
 scripts/
