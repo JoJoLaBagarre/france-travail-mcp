@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.jojolabagarre/france-travail-mcp",
-  "description": "Serveur MCP pour les API officielles de France Travail : offres d'emploi en temps réel, métiers ROME 4.0, prédiction ROMEO et entreprises qui recrutent.",
+  "description": "Serveur MCP des API officielles France Travail : offres d'emploi, ROME 4.0 et ROMEO.",
   "repository": {
     "url": "https://github.com/jojolabagarre/france-travail-mcp",
     "source": "github"
@@ -32,7 +32,7 @@
         },
         {
           "name": "FT_ENABLE_LABONNEBOITE",
-          "description": "Mettre 'true' pour activer l'outil expérimental La Bonne Boîte (nécessite une habilitation France Travail validée).",
+          "description": "Mettre 'true' pour activer l'outil expérimental La Bonne Boîte (habilitation FT requise).",
           "isRequired": false,
           "format": "string",
           "isSecret": false
