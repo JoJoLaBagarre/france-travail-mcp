@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "france-travail-mcp",
   "display_name": "France Travail MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Branchez votre assistant IA sur les API officielles de France Travail : offres d'emploi en temps réel, métiers ROME 4.0 et prédiction de code ROME.",
   "long_description": "Serveur MCP pour les API officielles de France Travail. Permet à un assistant IA de chercher des offres d'emploi en temps réel, de traduire un métier en code ROME (recherche ou prédiction ROMEO 2), de consulter les fiches métiers ROME 4.0 (compétences et savoirs), et de cibler les entreprises qui recrutent (La Bonne Boîte, expérimental). Authentification OAuth2 via vos identifiants francetravail.io.",
   "author": {

@@ -1,6 +1,6 @@
 {
   "name": "france-travail-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "io.github.JoJoLaBagarre/france-travail-mcp",
   "description": "Serveur MCP (Model Context Protocol) pour les API officielles de France Travail : offres d'emploi, ROME 4.0, ROMEO et La Bonne Boîte.",
   "type": "module",
